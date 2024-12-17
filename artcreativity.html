@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art and Creativity</title>
+    <style>
+        body { font-family: 'Courier New', monospace; background: #f4f4f9; color: #333; margin: 0; padding: 0; }
+        h1 { text-align: center; color: #ff6347; margin-top: 50px; font-size: 40px; }
+        .content { background: #fff; padding: 25px; margin: 20px auto; border-radius: 8px; width: 80%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        p { font-size: 18px; line-height: 1.6; color: #555; }
+        .btn-copy { background: #ff6347; color: white; padding: 10px 25px; border: none; border-radius: 5px; cursor: pointer; display: block; margin: 20px auto; font-size: 16px; }
+        .btn-copy:hover { background: #d9534f; }
+        .quote { font-style: italic; color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Art and Creativity</h1>
+    <div class="content">
+        <p>Welcome to the world of art and creativity! This is a space where you can explore new ideas, thoughts, and get inspired to create something beautiful.</p>
+        <p>This page provides information and resources that can help in your personal and creative development. We believe that art is a way to express oneself and transform the world around us.</p>
+        
+        <div class="quote">
+            <p>"Creativity is intelligence having fun." � Albert Einstein</p>
+        </div>
+
+        <button class="btn-copy" onclick="copyText()">Copy This Text</button>
+    </div>
+
+    <script>
+        function copyText() {
+            var text = `
+Welcome to the world of art and creativity! This is a space where you can explore new ideas, thoughts, and get inspired to create something beautiful.
+
+This page provides information and resources that can help in your personal and creative development. We believe that art is a way to express oneself and transform the world around us.
+
+"Creativity is intelligence having fun." � Albert Einstein
+            `;
+            var tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Text has been copied! You can now paste it into Notepad.');
+        }
+    </script>
+
+</body>
+</html>
